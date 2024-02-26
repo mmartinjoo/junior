@@ -27,7 +27,7 @@ class JuniorCommand extends Command
 
         $this->url = 'https://junior-alq2s.ondigitalocean.app';
 
-        $this->apiKey = config('junior-artisan.api_key');
+        $this->apiKey = config('junior.api_key', '');
     }
 
     public function handle()
