@@ -1,5 +1,7 @@
 # Installation
 
+Junior is a Laravel artisan command that writes code for you
+
 1. Install the package:
 ```sh
 composer require mmartinjoo/junior
