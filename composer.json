@@ -1,12 +1,12 @@
 {
-    "name": "mmartinjoo/junior-artisan",
-    "description": "Testing",
+    "name": "mmartinjoo/junior",
+    "description": "Junior is an artisan command that writes code for you",
     "keywords": [
         "Martin Joo",
         "laravel",
-        "junior-artisan"
+        "junior"
     ],
-    "homepage": "https://github.com/mmartinjoo/junior-artisan",
+    "homepage": "https://github.com/mmartinjoo/junior",
     "license": "MIT",
     "authors": [
         {
@@ -21,54 +21,30 @@
         "illuminate/contracts": "^10.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.8",
-        "orchestra/testbench": "^8.8",
-        "pestphp/pest": "^2.20",
-        "pestphp/pest-plugin-arch": "^2.5",
-        "pestphp/pest-plugin-laravel": "^2.0"
+        "orchestra/testbench": "^8.8"
     },
     "autoload": {
         "psr-4": {
-            "Mmartinjoo\\JuniorArtisan\\": "src/",
-            "Mmartinjoo\\JuniorArtisan\\Database\\Factories\\": "database/factories/"
+            "Mmartinjoo\\Junior\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mmartinjoo\\JuniorArtisan\\Tests\\": "tests/",
+            "Mmartinjoo\\Junior\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
-    },
-    "scripts": {
-        "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-junior-artisan --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": [
-            "@composer run prepare",
-            "@php vendor/bin/testbench workbench:build --ansi"
-        ],
-        "start": [
-            "Composer\\Config::disableProcessTimeout",
-            "@composer run build",
-            "@php vendor/bin/testbench serve"
-        ],
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
+            "pestphp/pest-plugin": false
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Mmartinjoo\\JuniorArtisan\\JuniorArtisanServiceProvider"
+                "Mmartinjoo\\Junior\\JuniorServiceProvider"
             ]
         }
     },

@@ -1,12 +1,12 @@
 <?php
 
-namespace Mmartinjoo\JuniorArtisan;
+namespace Mmartinjoo\Junior;
 
-use Mmartinjoo\JuniorArtisan\Commands\JuniorCommand;
+use Mmartinjoo\Junior\Commands\JuniorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class JuniorArtisanServiceProvider extends PackageServiceProvider
+class JuniorServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

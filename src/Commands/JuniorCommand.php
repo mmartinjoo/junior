@@ -1,6 +1,6 @@
 <?php
 
-namespace Mmartinjoo\JuniorArtisan\Commands;
+namespace Mmartinjoo\Junior\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
