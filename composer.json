@@ -69,10 +69,7 @@
         "laravel": {
             "providers": [
                 "Mmartinjoo\\JuniorArtisan\\JuniorArtisanServiceProvider"
-            ],
-            "aliases": {
-                "JuniorArtisan": "Mmartinjoo\\JuniorArtisan\\Facades\\JuniorArtisan"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
