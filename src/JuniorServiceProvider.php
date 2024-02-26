@@ -2,22 +2,30 @@
 
 namespace Mmartinjoo\Junior;
 
+use Illuminate\Support\ServiceProvider;
 use Mmartinjoo\Junior\Commands\JuniorCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class JuniorServiceProvider extends PackageServiceProvider
+class JuniorServiceProvider extends ServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function boot()
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
-        $package
-            ->name('junior-artisan')
-            ->hasConfigFile()
-            ->hasCommand(JuniorCommand::class);
+        $this->publishes([
+            __DIR__.'/../config/junior.php' => config_path('junior.php'),
+        ], 'config');
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'junior');
+    }
+
+    public function register()
+    {
+        $this->publishes([
+            __DIR__ . '/../config/junior.php' => config_path('junior.php'),
+        ]);
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                JuniorCommand::class,
+            ]);
+        }
     }
 }
