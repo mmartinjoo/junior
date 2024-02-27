@@ -25,7 +25,7 @@ class JuniorCommand extends Command
     {
         parent::__construct();
 
-        $this->url = 'https://junior-alq2s.ondigitalocean.app';
+        $this->url = 'https://getjuniordev.com';
 
         $this->apiKey = config('junior.api_key', '');
     }
