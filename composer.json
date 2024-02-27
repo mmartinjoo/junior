@@ -1,6 +1,6 @@
 {
     "name": "mmartinjoo/junior",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "Junior is a Laravel artisan command that writes code for you",
     "keywords": [
         "Martin Joo",
